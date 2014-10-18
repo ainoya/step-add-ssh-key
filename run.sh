@@ -13,7 +13,9 @@ main() {
 
   local private_key=$(eval echo "\$${WERCKER_ADD_SSH_KEY_KEYNAME}_PRIVATE");
 
-  echo $private_key
+  echo "print all envs:"
+  printenv
+  echo "private key: $private_key:"
 
   validate_key "$private_key";
 
